@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Storybook for the Web Engineering Module</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Slabo+13px" rel="stylesheet">
+  <style>
+    :root {
+      --font-main: 'Nanum Gothic', sans-serif;
+      --font-header: 'Slabo 13px', serif;
+      --color-bg: #f8f8f8;
+      --color-font: #333;
+    }
+
+
+    *, *:after, *:before {
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 18px;
+      font-family: var(--font-main);
+      color: var(--color-font);
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+    }
+
+    h1, h2 {
+      font-family: var(--font-header);
+      margin-left: -1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    header, footer {
+      padding: 1rem;
+    }
+
+    main {
+      width: 70%;
+      margin: auto;
+    }
+
+    main > section {
+      padding: 0 1rem;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table > caption {
+      font-family: var(--font-header);
+      font-size: 1.3rem;
+      background-color: var(--color-font);
+      color: var(--color-bg);
+      padding: .5rem;
+    }
+
+    th, td {
+      padding: .5rem .75rem;
+    }
+
+    thead th {
+      border-bottom: 2px solid var(--color-font);
+      text-align: left;
+    }
+
+    tbody tr.important {
+      background-color: rgba(216, 137, 19, 0.4);
+    }
+
+    tbody tr.break {
+      color: rgba(0,0,0,.3);
+    }
+
+    tfoot {
+      font-style: italic;
+    }
+
+    @media screen and (max-width: 768px) {
+      html {
+        font-size: 16px;
+      }
+      main {
+        width: 95%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <dfn title="Drehbuch">Storybook</dfn> for the Web Engineering Module
+  </header>
+  <main>
+    <section id="context">
+      <h1>Module delivery mode</h1>
+      <p> This installment of the
+        <dfn title="WebEngineering">webeC</dfn> module is delivered in the spring semester of 2018.
+      </p>
+    </section>
+    <section id="content">
+      <h1>Delivery dates and examination details</h1>
+      <article>
+        <h2>Overview</h2>
+        <table cellpadding="0" cellspacing="0">
+          <caption>Delivery dates</caption>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th> # </th>
+              <th>Topic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>19.02.18</td>
+              <td>0</td>
+              <td>HTML</td>
+            </tr>
+            <tr>
+              <td>26.02.18</td>
+              <td>1</td>
+              <td>CSS</td>
+            </tr>
+            <tr>
+              <td>05.03.18</td>
+              <td>2</td>
+              <td>Grails, Web, MVC, Test</td>
+            </tr>
+            <tr>
+              <td>12.03.18</td>
+              <td>3</td>
+              <td>GSP, Template, Taglib, Layout</td>
+            </tr>
+            <tr>
+              <td>19.03.18</td>
+              <td>4</td>
+              <td>Javascript</td>
+            </tr>
+            <tr>
+              <td>26.03.18</td>
+              <td>5</td>
+              <td>Consolidation training</td>
+            </tr>
+            <tr class="break">
+              <td>02.04.18</td>
+              <td>6</td>
+              <td>Frei</td>
+            </tr>
+            <tr>
+              <td>09.04.18</td>
+              <td>7</td>
+              <td>Persistence, DB-Access (GORM)</td>
+            </tr>
+            <tr>
+              <td>16.04.18</td>
+              <td>8</td>
+              <td>REST, Services</td>
+            </tr>
+            <tr class="break">
+              <td>23.04.18</td>
+              <td>9</td>
+              <td>Frei</td>
+            </tr>
+            <tr class="important">
+              <td>30.04.18</td>
+              <td>10</td>
+              <td>ANWESENHEITSPLICHT! Übungsvorbereitung</td>
+            </tr>
+            <tr>
+              <td>07.05.18</td>
+              <td>11</td>
+              <td>Übungsanlass</td>
+            </tr>
+            <tr>
+              <td>14.05.18</td>
+              <td>12</td>
+              <td>Responsive / Mobile Web</td>
+            </tr>
+            <tr class="important">
+              <td>28.05.18</td>
+              <td>13</td>
+              <td>WICHTIG! Übungsabgabe</td>
+            </tr>
+            <tr>
+              <td>04.06.18</td>
+              <td>14</td>
+              <td>Deployment</td>
+            </tr>
+            <tr>
+              <td>11.06.18</td>
+              <td>15</td>
+              <td>Prüfungsvorbereitung</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"> MSP date to be announced</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+      <article>
+        <h2> Total Effort</h2>
+        <p> Classroom lectures add up to
+          <code>13 * 3h = 39h</code>.</p>
+        <p> Prework and afterwork, including homework adds up to
+          <code>13 * 2h = 26h</code>.</p>
+        <p> The exercise for the continuous assessment grade takes
+          <code>3 * 5h = 15h</code>.</p>
+        <p> Preparation for the final exam will take approximately
+          <code>8h</code>.</p>
+        <p> Writing the final exam takes
+          <code>2h</code>.</p>
+        <p> This makes a total of
+          <code>90h</code>.</p>
+      </article>
+      <article id="criteria">
+        <h2> Passing criteria </h2>
+        <ul>
+          <li>You have to attend the exercise preparation event.</li>
+          <li>You have to do the exercise and deliver before the deadline.</li>
+          <li>You have to attend the
+            <dfn title="Modulschlussprüfung">final exam (MSP)</dfn>.</li>
+        </ul>
+        <p> Your exercise will determine your
+          <abbr title="Erfahrungsnote">continuous assessment grade (EN)</abbr>. </p>
+        <p> EN and MSP together make your final grade. </p>
+
+      </article>
+    </section>
+  </main>
+  <footer>
+    <address>Dierk König, 5.2B16, mailto:dierk.koenig@fhnw.ch</address>
+  </footer>
+</body>
+
+</html>
